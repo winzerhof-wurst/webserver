@@ -1,5 +1,6 @@
 FROM php:7.1-apache-jessie
 COPY apache.conf /etc/apache2/sites-available/wiwu.conf
+COPY ports.conf /etc/apache2/ports.conf
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libmcrypt-dev \
     mysql-client \
@@ -8,3 +9,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && a2dissite 000-default.conf \
     && a2ensite wiwu.conf
 WORKDIR /var/www
+EXPOSE 8080
+
