@@ -9,5 +9,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && a2dissite 000-default.conf \
     && a2ensite wiwu.conf
 WORKDIR /var/www
+USER www-data
 EXPOSE 8080
 
