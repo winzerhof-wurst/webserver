@@ -9,10 +9,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && a2dissite 000-default.conf \
     && a2ensite wiwu.conf
 WORKDIR /var/www
-USER www-data
 RUN chown -R www-data:www-data /var/run/apache2 \
     && chown -R www-data:www-data /var/lock/apache2 \
     && chmod -R u+rwx /var/run/apache2 \
     && chmod -R u+rwx /var/lock/apache2
+USER www-data
 EXPOSE 8080
 
