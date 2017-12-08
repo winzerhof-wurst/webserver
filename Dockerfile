@@ -11,8 +11,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /var/www
 RUN chown -R www-data:www-data /var/run/apache2 \
     && chown -R www-data:www-data /var/lock/apache2 \
-    && chmod -R u+rwx /var/run/apache2 \
-    && chmod -R u+rwx /var/lock/apache2
+    && chmod -R a+rwx /var/run/apache2 \
+    && chmod -R a+rwx /var/lock/apache2
 USER www-data
 EXPOSE 8080
 
