@@ -1,4 +1,4 @@
-FROM php:7.1.13-apache-jessie
+FROM php:7.1.14-apache-jessie
 COPY apache.conf /etc/apache2/sites-available/wiwu.conf
 COPY ports.conf /etc/apache2/ports.conf
 RUN apt-get update && apt-get install -y --no-install-recommends \
