@@ -1,4 +1,4 @@
-FROM php:7.1.24-apache-jessie
+FROM php:7.1.25-apache-jessie
 COPY apache.conf /etc/apache2/sites-available/wiwu.conf
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libmcrypt-dev \
